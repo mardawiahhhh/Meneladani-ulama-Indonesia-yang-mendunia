@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MPI PAI XI — Ulama Indonesia Mendunia</title>
+<style>
+:root{--navy:#102a43;--teal:#087e78;--gold:#e7b34b;--cream:#f7f4ec;--ink:#183247;--muted:#617487;--white:#fff;--line:#dce5e8}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
+button{font:inherit;cursor:pointer;border:0;border-radius:12px;padding:11px 17px;background:var(--teal);color:#fff;font-weight:700}
+button.secondary{background:#e7efef;color:var(--navy);border:1px solid #cbdcdd}button.gold{background:var(--gold);color:#33250b}button:disabled{opacity:.45;cursor:not-allowed}
+header{background:var(--navy);color:#fff;padding:14px max(18px,calc((100% - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:5}
+.brand{font-weight:800;letter-spacing:.3px}.brand small{display:block;font-weight:500;color:#c8d9e5;font-size:12px}
+main{max-width:1120px;margin:auto;padding:26px 18px 70px}.screen{display:none;animation:fade .25s}.screen.active{display:block}@keyframes fade{from{opacity:.3;transform:translateY(5px)}to{opacity:1;transform:none}}
+.hero{background:linear-gradient(130deg,#102a43,#087e78);color:#fff;border-radius:24px;padding:clamp(28px,6vw,64px);position:relative;overflow:hidden}
+.hero:after{content:"۞";position:absolute;right:4%;top:-40px;font-size:240px;color:#ffffff12}
+.kicker{color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:12px}
+h1{font-size:clamp(32px,5vw,56px);line-height:1.1;margin:12px 0}h2{font-size:clamp(25px,3vw,34px);line-height:1.2;color:var(--navy);margin:8px 0 16px}h3{margin:0 0 8px;color:var(--navy)}
+p{margin:8px 0 14px}.muted{color:var(--muted)}.hero p{max-width:680px;color:#e0eeee}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:14px;margin:8px 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:19px;box-shadow:0 6px 20px #153b5010}
+.menu-card{min-height:160px;display:flex;flex-direction:column;justify-content:space-between}.symbol{font-size:28px}.tag{display:inline-block;background:#eaf4f2;color:#08645e;border-radius:30px;padding:4px 10px;font-size:12px;font-weight:800}
+.portrait{width:100%;height:140px;border-radius:13px;background:linear-gradient(145deg,#d9e9e6,#f1e5c9);display:grid;place-items:center;font-size:48px;color:#365d61;margin-bottom:12px}
+.bio-card{display:flex;flex-direction:column}.bio-card p{font-size:14px}.bio-card button{margin-top:auto}
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;margin:16px 0}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}.tabs button{padding:9px 13px}.tabs button.active{background:var(--navy)}
+.fact{border-left:4px solid var(--gold);padding:8px 14px;background:#fff9e9;border-radius:0 10px 10px 0;margin:12px 0}
+.step{display:flex;gap:12px;align-items:flex-start;margin:12px 0}.num{flex:0 0 32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800}
+.option{display:block;width:100%;text-align:left;background:#f5f8f8;color:var(--ink);border:1px solid var(--line);margin:8px 0}.option.selected{outline:3px solid #e7b34b;background:#fff9e9}
+.feedback{padding:12px;border-radius:12px;background:#eaf4f2;margin-top:12px}.progress{height:9px;background:#e4ebec;border-radius:20px;overflow:hidden}.progress span{display:block;height:100%;background:var(--gold);width:0}
+footer{max-width:1120px;margin:auto;padding:0 18px 28px;color:var(--muted);font-size:13px}
+a{color:#087e78}ul{padding-left:21px}.small{font-size:13px}.score{font-size:30px;font-weight:850;color:var(--teal)}
+@media(max-width:600px){header{position:static;align-items:flex-start;flex-direction:column}.section-head{display:block}.hero{border-radius:18px}}
+</style>
+</head>
+<body>
+<header><div class="brand">MPI PAI & BUDI PEKERTI <small>SMK Negeri 5 Kolaka Utara · Kelas XI · Fase F</small></div><button class="secondary" onclick="go('home')">⌂ Menu Utama</button></header>
+<main>
+<section id="splash" class="screen active">
+ <div class="hero"><div class="kicker">Media Pembelajaran Interaktif</div><h1>Meneladani Jejak Langkah Ulama Indonesia yang Mendunia</h1>
+ <p>Mengenal perjalanan pendidikan, jaringan keilmuan, dakwah, dan kontribusi enam ulama Nusantara—lalu mengambil inspirasi untuk berkarya di masa kini.</p>
+ <p><b>Pendidikan Agama Islam dan Budi Pekerti · Kelas XI SMK</b></p>
+ <div class="actions"><button class="gold" onclick="go('home')">Mulai Belajar →</button></div></div>
+ <p class="muted small">Petunjuk: gunakan menu Materi, Simulasi, dan Kuis. Aplikasi berjalan secara lokal/offline setelah file ini diunduh.</p>
+</section>
+<section id="home" class="screen">
+ <div class="section-head"><div><div class="kicker">Beranda</div><h2>Selamat datang, pembelajar!</h2><p class="muted">Pilih kegiatan belajar yang ingin kamu jelajahi.</p></div></div>
+ <div class="grid">
+  <div class="card menu-card"><div><div class="symbol">📚</div><h3>Materi</h3><p class="muted">Biografi, pendidikan, perjalanan intelektual, dan kontribusi enam ulama.</p></div><button onclick="go('materi')">Buka Materi</button></div>
+  <div class="card menu-card"><div><div class="symbol">🧭</div><h3>Simulasi</h3><p class="muted">Pilih strategi dakwah dan hubungkan dengan teladan para ulama.</p></div><button onclick="go('simulasi')">Mulai Simulasi</button></div>
+  <div class="card menu-card"><div><div class="symbol">📝</div><h3>Kuis</h3><p class="muted">10 soal pilihan ganda dengan skor otomatis di perangkat.</p></div><button onclick="startQuiz()">Kerjakan Kuis</button></div>
+  <div class="card menu-card"><div><div class="symbol">ℹ️</div><h3>Profil & Panduan</h3><p class="muted">Identitas media, tujuan pembelajaran, dan petunjuk penggunaan.</p></div><button onclick="go('profil')">Lihat Profil</button></div>
+ </div>
+</section>
+<section id="materi" class="screen">
+ <div class="kicker">Materi inti</div><h2>Enam ulama, enam jejak keilmuan</h2>
+ <p>Tekan kartu untuk membaca ringkasan. Perhatikan bagaimana pendidikan, guru, karya, dan murid membentuk jaringan ilmu lintas wilayah.</p>
+ <div class="grid" id="bioGrid"></div>
+ <div class="panel" id="videoPembelajaran">
+ <div class="kicker">Video pembelajaran</div>
+ <h3>Simak video: Ulama Indonesia yang Mendunia</h3>
+ <p class="muted">Tonton video berikut sebagai penguatan materi sebelum melanjutkan ke simulasi dan kuis.</p>
+ <div style="position:relative;width:100%;padding-top:56.25%;overflow:hidden;border-radius:14px;background:#102a43">
+  <iframe src="https://www.youtube-nocookie.com/embed/RZpcB4haVVY" title="Video pembelajaran: Ulama Indonesia yang Mendunia" style="position:absolute;inset:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ </div>
+ <p class="small" style="margin-top:12px">Jika video tidak dapat diputar di dalam MPI, <a href="https://www.youtube.com/watch?v=RZpcB4haVVY" target="_blank" rel="noopener">klik di sini untuk menonton langsung di YouTube</a>.</p>
+ </div>
+ <div class="panel"><h3>Benang merah pembelajaran</h3><ul><li>Ilmu diperoleh melalui kesungguhan, berguru, membaca, dan perjalanan intelektual.</li><li>Ilmu disebarkan melalui pengajaran, karya tulis, pesantren, organisasi, dan pelayanan masyarakat.</li><li>Pengaruh mendunia tidak hanya berarti dikenal luas, tetapi juga memberi manfaat lintas generasi dan tempat.</li></ul></div>
+ <button class="secondary" onclick="go('home')">← Kembali</button>
+</section>
+<section id="detail" class="screen">
+ <div class="kicker">Profil ulama</div><h2 id="bioName"></h2><div class="panel" id="bioDetail"></div>
+ <div class="actions"><button class="secondary" onclick="go('materi')">← Daftar Ulama</button><button onclick="go('simulasi')">Lanjut ke Simulasi →</button></div>
+</section>
+<section id="simulasi" class="screen">
+ <div class="kicker">Simulasi dakwah</div><h2>Memilih cara menyampaikan kebaikan</h2>
+ <div class="panel"><p><b>Skenario:</b> Kamu menjadi anggota tim Rohis di SMK. Sebagian teman belum tertarik mengikuti kegiatan keagamaan karena merasa materinya jauh dari kehidupan mereka. Pilih strategi yang paling tepat, lalu lihat kaitannya dengan jejak ulama.</p>
+ <h3>Pilih salah satu dari tiga metode dakwah</h3>
+ <div class="grid">
+  <div class="card"><div class="symbol">🎤</div><h3>1. Bil-lisan</h3><p class="small">Menyampaikan pesan melalui ceramah, dialog, nasihat, dan komunikasi santun.</p><button onclick="chooseMethod('lisan')">Pilih metode</button></div>
+  <div class="card"><div class="symbol">📖</div><h3>2. Bil-qalam</h3><p class="small">Menyebarkan ilmu melalui tulisan, buku, artikel, poster, atau konten digital yang bertanggung jawab.</p><button onclick="chooseMethod('qalam')">Pilih metode</button></div>
+  <div class="card"><div class="symbol">🤝</div><h3>3. Bil-hal</h3><p class="small">Memberi teladan melalui tindakan nyata, pelayanan, pendidikan, dan kepedulian sosial.</p><button onclick="chooseMethod('hal')">Pilih metode</button></div>
+ </div><div id="methodResult" class="feedback" aria-live="polite">Pilih metode untuk melihat umpan balik dan contoh kontribusi ulama.</div></div>
+ <div class="panel"><h3>Jejak kontribusi: dakwah, pendidikan, dan kebangsaan</h3>
+ <div class="grid">
+  <div><b>Pengajaran dan karya ilmiah</b><p class="small">Nawawi al-Bantani dan Mahfuzh al-Tarmasi dikenal melalui karya serta jaringan pengajaran di Makkah.</p></div>
+  <div><b>Pesantren dan organisasi</b><p class="small">Hasyim Asy’ari mengembangkan pendidikan pesantren dan mendirikan NU; Ahmad Dahlan mendirikan Muhammadiyah dengan gerakan pendidikan dan sosial.</p></div>
+  <div><b>Literasi dan pemikiran publik</b><p class="small">Hamka menyebarkan gagasan melalui tafsir, buku, sastra, dakwah, dan kiprah publik.</p></div>
+ </div></div>
+ <div class="panel"><h3>Tantangan berpikir kritis</h3><p>Apakah satu metode dakwah selalu paling efektif untuk semua keadaan? Jelaskan pilihanmu berdasarkan kebutuhan audiens, tujuan, etika, dan dampak jangka panjang.</p>
+ <textarea id="critical" rows="4" style="width:100%;padding:12px;border:1px solid #cbd8dc;border-radius:10px;font:inherit" placeholder="Tuliskan alasan dan contoh tindakan yang bisa kamu lakukan di sekolah..."></textarea>
+ <div class="actions"><button onclick="saveReflection()">Simpan refleksi di sesi ini</button></div><p id="reflectionMsg" class="small muted">Jawaban tersimpan sementara selama halaman terbuka.</p></div>
+ <button class="secondary" onclick="go('home')">← Kembali</button>
+</section>
+<section id="quiz" class="screen">
+ <div class="kicker">Evaluasi pembelajaran</div><h2>Kuis: Ulama Indonesia yang Mendunia</h2>
+ <div class="panel"><div class="section-head"><div><b id="qCounter">Soal 1 dari 10</b><p class="muted small">Pilih satu jawaban paling tepat.</p></div><div class="score" id="liveScore">0</div></div>
+ <div class="progress"><span id="progressBar"></span></div><h3 id="question" style="margin-top:20px"></h3><div id="answers"></div><div id="qFeedback" aria-live="polite"></div>
+ <div class="actions"><button id="nextQ" onclick="nextQuestion()" disabled>Soal Berikutnya →</button></div></div>
+ <div id="quizEnd" class="panel" style="display:none"><div class="kicker">Hasil kuis</div><h2>Kuis selesai!</h2><div class="score" id="finalScore"></div><p id="finalMessage"></p><button onclick="startQuiz()">Ulangi Kuis</button> <button class="secondary" onclick="go('home')">Menu Utama</button></div>
+</section>
+<section id="profil" class="screen">
+ <div class="kicker">Profil media</div><h2>Identitas dan tujuan pembelajaran</h2>
+ <div class="panel"><p><b>Satuan pendidikan:</b> SMK Negeri 5 Kolaka Utara</p><p><b>Mata pelajaran:</b> Pendidikan Agama Islam dan Budi Pekerti</p><p><b>Kelas/Fase:</b> XI / Fase F · Kurikulum Merdeka</p><p><b>Materi:</b> Meneladani jejak langkah ulama Indonesia yang mendunia</p>
+ <h3>Tujuan pembelajaran</h3><ol><li>Mengidentifikasi enam ulama Indonesia yang berpengaruh luas.</li><li>Menjelaskan latar pendidikan dan perjalanan intelektual mereka.</li><li>Menguraikan kontribusi dalam dakwah, pendidikan, karya keilmuan, sosial, dan kehidupan kebangsaan.</li><li>Menganalisis nilai keteladanan yang relevan untuk kehidupan pelajar SMK.</li></ol>
+ <h3>Petunjuk penggunaan</h3><ol><li>Mulai dari menu Materi dan buka setiap profil ulama.</li><li>Kerjakan Simulasi dan tulis refleksi kritis.</li><li>Kerjakan 10 soal kuis; skor dihitung otomatis tanpa internet.</li></ol>
+ <p class="small muted">Catatan: gambar tokoh tidak disertakan agar guru dapat memasukkan foto/ilustrasi berlisensi atau arsip yang terverifikasi. Ikon pada kartu merupakan placeholder visual.</p></div>
+ <button class="secondary" onclick="go('home')">← Kembali</button>
+</section>
+</main>
+<footer>MPI PAI Kelas XI · Materi diringkas untuk pembelajaran. Perbedaan angka/tahun dalam sejumlah sumber biografi dapat ditemukan; gunakan rujukan yang dicantumkan dan verifikasi saat pengembangan lanjutan.</footer>
+<script>
+const bios=[
+{name:"Syekh Nawawi al-Bantani",symbol:"📚",focus:"Tafsir, fikih, tasawuf, dan karya keislaman",education:"Lahir di Tanara, Banten. Sejak kecil belajar Al-Qur’an, bahasa Arab, fikih, tauhid, dan tafsir dari ayahnya. Kemudian berguru kepada ulama di Banten dan melanjutkan studi ke Makkah; ia belajar di lingkungan Masjidil Haram dan mengembangkan kapasitas sebagai pengajar.",journey:"Menetap dan mengajar di Makkah. Produktif menulis kitab dalam berbagai bidang ilmu agama; karya-karyanya dipelajari di berbagai wilayah dunia Islam. Dikenal sebagai mahaguru ulama Nusantara.",contribution:"Menguatkan tradisi keilmuan melalui pengajaran dan karya tulis; menjadi rujukan lintas generasi. Teladan: tekun belajar, produktif berkarya, dan berbagi ilmu.",source:"NU Online: https://islam.nu.or.id/tokoh/syekh-nawawi-banten-dan-beberapa-pemikiran-pentingnya-vDMUm"},
+{name:"Syekh Ahmad Khatib al-Minangkabawi",symbol:"🕌",focus:"Fikih, ilmu falak, dan pendidikan ulama",education:"Lahir di Koto Gadang, Sumatera Barat (1860). Menempuh pendidikan awal di Kweekschool/Sekolah Raja Bukittinggi. Saat masih muda berangkat haji dan bermukim di Makkah untuk mendalami ilmu agama.",journey:"Menjadi ulama terkemuka di Makkah dan dikenal sebagai imam serta khatib Masjidil Haram. Mengajar banyak murid dari Nusantara dan kawasan Melayu; di antara murid yang dikaitkan dengan jaringan keilmuannya ialah Hasyim Asy’ari dan Ahmad Dahlan.",contribution:"Membangun jaringan guru-murid lintas negara dan mewariskan tradisi kajian fikih serta ilmu falak. Teladan: memperluas wawasan, berdialog, dan membimbing generasi penerus.",source:"Kementerian Agama RI: https://kemenag.go.id/kolom/syekh-ahmad-khatib-ulama-besar-nusantara-di-tanah-hijaz-lNEhp"},
+{name:"Syekh Mahfuzh al-Tarmasi",symbol:"✍️",focus:"Hadis, sanad, fikih, dan pendidikan",education:"Berasal dari Tremas, Pacitan. Mendapat pendidikan agama dari keluarga pesantren dan ayahnya, termasuk Al-Qur’an, tauhid, dan fikih. Pernah belajar kepada Kiai Sholeh Darat di Semarang, lalu memperdalam ilmu di Makkah.",journey:"Berkarier sebagai pengajar di Makkah dan dikenal luas dalam keilmuan hadis serta sanad. Karya dan murid-muridnya menjadi penghubung tradisi ilmu Haramain dengan pesantren di Nusantara.",contribution:"Mengembangkan transmisi ilmu melalui sanad, pengajaran, dan karya. Teladan: menjaga ketelitian sumber, menghormati guru, dan mengembangkan keahlian secara mendalam.",source:"Jurnal Pendidikan Islam UIN Sunan Kalijaga: https://ejournal.uin-suka.ac.id/tarbiyah/JPI/article/view/2551"},
+{name:"K.H. Hasyim Asy’ari",symbol:"🏫",focus:"Pesantren, hadis, organisasi, dan kebangsaan",education:"Lahir di lingkungan pesantren Jombang. Belajar di sejumlah pesantren di Jawa dan Madura, antara lain Langitan, Kademangan Bangkalan, dan Siwalan Panji. Melanjutkan studi ke Makkah dan belajar kepada ulama, termasuk Syekh Mahfuzh al-Tarmasi.",journey:"Mendirikan Pesantren Tebuireng pada 1899 dan menjadi salah satu pendiri Nahdlatul Ulama pada 1926. Peran keagamaannya terhubung dengan pendidikan pesantren dan perjuangan kebangsaan.",contribution:"Mengembangkan pendidikan pesantren, kaderisasi ulama, organisasi sosial-keagamaan, serta menyerukan pembelaan tanah air. Teladan: disiplin, berilmu, berorganisasi, dan peduli bangsa.",source:"NU Online: https://jatim.nu.or.id/pustaka/biografi-kh-hasyim-asy-ari-dan-meletusnya-resolusi-jihad-FXcrR"},
+{name:"K.H. Ahmad Dahlan",symbol:"🌱",focus:"Pembaruan pendidikan, dakwah, dan pelayanan sosial",education:"Lahir di Kauman, Yogyakarta, dengan nama Muhammad Darwis. Belajar Al-Qur’an dan kitab agama dari keluarga serta sejumlah guru. Memperluas pengetahuan melalui perjalanan dan belajar di Makkah.",journey:"Mengembangkan dakwah yang mendorong umat mengamalkan Islam dan mengatasi kebodohan. Mendirikan Muhammadiyah pada 1912, yang kemudian mengembangkan pendidikan, kesehatan, dan pelayanan sosial.",contribution:"Mendorong pembaruan pendidikan dan amal nyata melalui organisasi. Teladan: berpikir terbuka, menghubungkan ilmu dengan kebutuhan masyarakat, dan bekerja kolaboratif.",source:"Muhammadiyah: https://muhammadiyah.or.id/sejarah-muhammadiyah/"},
+{name:"Haji Abdul Malik Karim Amrullah (Hamka)",symbol:"📘",focus:"Tafsir, sastra, dakwah, dan pemikiran publik",education:"Lahir di Maninjau, Sumatera Barat (1908). Belajar di Diniyah School dan Sumatera Thawalib. Memperluas wawasan melalui perjalanan ke Jawa, belajar dari tokoh pergerakan, serta pengalaman berhaji dan berkunjung ke dunia Arab.",journey:"Menjadi ulama, penulis, jurnalis, dan tokoh publik. Menulis karya sastra dan keislaman, termasuk Tafsir Al-Azhar; gagasannya dikenal luas di Indonesia dan kawasan Melayu.",contribution:"Menyebarkan ilmu melalui tulisan, ceramah, sastra, dan kiprah sosial-politik. Teladan: literasi, keberanian berpikir, dan menyampaikan pesan agama dengan bahasa yang dekat dengan masyarakat.",source:"Badan Bahasa Kemendikdasmen: https://badanbahasa.kemendikdasmen.go.id/tokoh-detail/3349/hamka"}
+];
+const grid=document.getElementById('bioGrid');
+bios.forEach((b,i)=>{const d=document.createElement('div');d.className='card bio-card';d.innerHTML=`<div class="portrait">${b.symbol}</div><span class="tag">${b.focus}</span><h3 style="margin-top:10px">${b.name}</h3><p class="muted">${b.education.slice(0,125)}…</p><button onclick="showBio(${i})">Jelajahi profil →</button>`;grid.appendChild(d)});
+function go(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function showBio(i){const b=bios[i];document.getElementById('bioName').textContent=b.name;document.getElementById('bioDetail').innerHTML=`<span class="tag">${b.focus}</span><h3 style="margin-top:16px">Latar belakang pendidikan</h3><p>${b.education}</p><h3>Perjalanan intelektual</h3><p>${b.journey}</p><h3>Jasa dan keteladanan</h3><p>${b.contribution}</p><p class="small"><b>Bacaan lanjutan:</b> <a href="${b.source.split(': ')[1]}" target="_blank" rel="noopener">Sumber rujukan</a></p>`;go('detail')}
+function chooseMethod(m){const data={lisan:["Bil-lisan","Cocok ketika dibutuhkan penjelasan langsung, tanya jawab, dan klarifikasi. Gunakan bahasa santun serta dengarkan tanggapan audiens.","Contoh: Ahmad Khatib dikenal sebagai pengajar di Masjidil Haram; Hasyim Asy’ari dan Ahmad Dahlan juga berdakwah melalui pengajaran dan ceramah."],qalam:["Bil-qalam","Cocok untuk pesan yang perlu dipelajari ulang dan menjangkau audiens lebih luas. Pastikan informasi akurat, sumber jelas, dan tidak menyebarkan hoaks.","Contoh: Nawawi al-Bantani dan Mahfuzh al-Tarmasi mewariskan ilmu melalui kitab; Hamka melalui tafsir, buku, dan tulisan."],hal:["Bil-hal","Cocok ketika masalah membutuhkan contoh konkret dan manfaat langsung. Konsistensi tindakan membuat pesan lebih dipercaya.","Contoh: Ahmad Dahlan mengembangkan amal usaha pendidikan dan sosial; Hasyim Asy’ari mengembangkan pesantren dan kaderisasi."]};const x=data[m];document.getElementById('methodResult').innerHTML=`<b>${x[0]} — pilihanmu</b><p>${x[1]}</p><p><b>Kaitan dengan teladan ulama:</b> ${x[2]}</p><p><b>Pertanyaan:</b> Apa risiko jika metode ini dilakukan tanpa memahami kebutuhan audiens?</p>`}
+function saveReflection(){const t=document.getElementById('critical').value.trim();document.getElementById('reflectionMsg').textContent=t?`Refleksi tersimpan sementara (${t.length} karakter). Ingat untuk menyalinnya jika ingin disimpan permanen.`:'Tuliskan refleksi terlebih dahulu.'}
+const qs=[
+["Ulama asal Tanara, Banten yang produktif menulis kitab tafsir, fikih, dan tasawuf adalah…",["Syekh Nawawi al-Bantani","Hamka","Ahmad Dahlan","Hasyim Asy’ari"],0,"Nawawi al-Bantani dikenal melalui karya-karya dalam beragam disiplin ilmu agama."],
+["Syekh Ahmad Khatib al-Minangkabawi dikenal pernah menjadi…",["Pendiri Tebuireng","Imam dan khatib Masjidil Haram","Ketua Muhammadiyah","Sastrawan nasional"],1,"Ia merupakan ulama asal Minangkabau yang berkiprah sebagai imam dan khatib di Masjidil Haram."],
+["Syekh Mahfuzh al-Tarmasi sangat dikenal dalam bidang…",["Kedokteran","Astronomi modern","Hadis dan sanad","Ekonomi"],2,"Mahfuzh al-Tarmasi dikenal sebagai ahli hadis dan sanad serta pengajar di Makkah."],
+["Pesantren Tebuireng didirikan oleh…",["K.H. Hasyim Asy’ari","K.H. Ahmad Dahlan","Hamka","Syekh Nawawi"],0,"Tebuireng menjadi pusat pendidikan dan kaderisasi yang didirikan Hasyim Asy’ari."],
+["Organisasi Muhammadiyah didirikan pada 1912 oleh…",["Syekh Ahmad Khatib","K.H. Ahmad Dahlan","Hamka","Syekh Mahfuzh"],1,"Ahmad Dahlan mendirikan Muhammadiyah sebagai gerakan dakwah, pendidikan, dan sosial."],
+["Nama lengkap Hamka adalah…",["Muhammad Darwis","Muhammad Mahfuzh bin Abdullah","Haji Abdul Malik Karim Amrullah","Muhammad Nawawi bin Umar"],2,"Hamka merupakan singkatan nama Haji Abdul Malik Karim Amrullah."],
+["Manakah contoh metode dakwah bil-qalam?",["Memberi bantuan langsung","Menulis artikel keislaman dengan sumber tepercaya","Mengadakan kerja bakti","Berdialog di kelas"],1,"Bil-qalam menggunakan tulisan sebagai sarana menyampaikan ilmu dan nilai."],
+["Persamaan penting perjalanan enam ulama tersebut adalah…",["Menghindari proses belajar","Mengutamakan popularitas","Mengembangkan ilmu dan memberi manfaat kepada masyarakat","Bekerja hanya untuk diri sendiri"],2,"Mereka menempuh proses belajar dan mengembangkan pengaruh melalui pengajaran, karya, organisasi, atau pelayanan."],
+["Sikap paling tepat saat membagikan kutipan agama di media sosial ialah…",["Langsung membagikan tanpa cek","Memastikan sumber, konteks, dan kebenarannya","Mengubah isi agar viral","Menyerang orang yang berbeda pendapat"],1,"Ketelitian sumber dan tanggung jawab adalah bagian dari etika menyebarkan ilmu."],
+["Jika teman tidak tertarik pada ceramah panjang, tindakan dakwah paling bijak adalah…",["Memaksa mereka hadir","Mencela mereka","Memahami kebutuhan mereka lalu memilih pendekatan dialogis dan tindakan nyata","Berhenti peduli"],2,"Dakwah perlu mempertimbangkan kondisi audiens, tujuan, etika, dan dampak."],
+];
+let qi=0,score=0,answered=false;
+function startQuiz(){qi=0;score=0;document.getElementById('quizEnd').style.display='none';document.querySelector('#quiz .panel').style.display='block';go('quiz');renderQ()}
+function renderQ(){answered=false;const q=qs[qi];document.getElementById('qCounter').textContent=`Soal ${qi+1} dari ${qs.length}`;document.getElementById('liveScore').textContent=score;document.getElementById('progressBar').style.width=(qi/qs.length*100)+'%';document.getElementById('question').textContent=q[0];document.getElementById('qFeedback').innerHTML='';document.getElementById('nextQ').disabled=true;document.getElementById('nextQ').textContent=qi===qs.length-1?'Lihat Hasil':'Soal Berikutnya →';const a=document.getElementById('answers');a.innerHTML='';q[1].forEach((v,i)=>{const b=document.createElement('button');b.className='option';b.textContent=String.fromCharCode(65+i)+'. '+v;b.onclick=()=>answer(i,b);a.appendChild(b)})}
+function answer(i,btn){if(answered)return;answered=true;const q=qs[qi];const opts=[...document.querySelectorAll('.option')];opts.forEach(x=>x.disabled=true);if(i===q[2]){score+=10;btn.style.borderColor='#087e78';btn.style.background='#e7f5ef';document.getElementById('qFeedback').innerHTML=`<div class="feedback"><b>Benar! +10 poin.</b><br>${q[3]}</div>`}else{btn.style.borderColor='#c65a4b';btn.style.background='#fff0ed';opts[q[2]].style.borderColor='#087e78';opts[q[2]].style.background='#e7f5ef';document.getElementById('qFeedback').innerHTML=`<div class="feedback"><b>Belum tepat.</b><br>Jawaban benar: ${q[1][q[2]]}. ${q[3]}</div>`}document.getElementById('liveScore').textContent=score;document.getElementById('nextQ').disabled=false}
+function nextQuestion(){if(!answered)return;if(qi<qs.length-1){qi++;renderQ()}else{document.querySelector('#quiz .panel').style.display='none';document.getElementById('quizEnd').style.display='block';document.getElementById('finalScore').textContent=score+' / 100';document.getElementById('progressBar').style.width='100%';document.getElementById('finalMessage').textContent=score>=80?'Hebat! Pemahamanmu sangat baik.':score>=60?'Bagus. Pelajari kembali profil ulama dan coba lagi.':'Tetap semangat. Baca materi kembali lalu ulangi kuis.'}}
+</script>
+</body></html>
